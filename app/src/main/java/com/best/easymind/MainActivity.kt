@@ -9,6 +9,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import com.best.easymind.ui.theme.EasyMindTheme
 
@@ -31,7 +32,12 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    // Example: use custom theme
+    Text(
+        text = "Hello $name!",
+        modifier = Modifier,
+        style = TextStyle(color = EasyMindTheme.colors.primaryText)
+    )
 }
 
 @Preview(showBackground = true)
